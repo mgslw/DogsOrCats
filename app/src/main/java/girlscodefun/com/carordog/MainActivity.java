@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
      */
     int dogVotesCounter = 0;
+    int catVotesCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void voteForCat (View view) {
+        TextView catVotes = (TextView) findViewById(R.id.cat_votes);
 
+        catVotesCounter = catVotesCounter + 1;
+
+        catVotes.setText("" + catVotesCounter);
+    }
 }
